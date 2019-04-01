@@ -23,7 +23,8 @@ def dias_para_segundos(dias, horas, minutos, segundos):
 def aumento_salarial(salario, porcentagem):
     ''' Recebe um salario e sua porcentagem de aumento, e retorna
     o novo salario'''
-    return round((salario * porcentagem /100) + salario, 2)
+    novo_salario = (salario * porcentagem /100) + salario
+    return round(novo_salario, 2)
 
 
 def preco_com_desconto(preco, desconto):
