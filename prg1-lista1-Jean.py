@@ -17,13 +17,22 @@ def metro_para_milimetros(metros):
 def dias_para_segundos(dias, horas, minutos, segundos):
     ''' Recebe uma data em dias com horas,minutos,segundos, e retorna
     a data em segundos'''
-    data_em_segundos = ((dias * 86400) + (horas * 3600) + (minutos * 60) + (segundos))
-    return data_em_segundos
+    return (dias * 24 * 60 * 60) + (horas * 60 * 60) + (minutos * 60) + segundos
+
+    # Metodo 2
+    # return (dias * 86400) + (horas * 3600) + (minutos * 60) + segundos
+
+    # Metodo 3
+    # '''a += b''' é = '''a = a + b'''
+    # a = dias * 86400
+    # b = horas * 3600
+    # c = minutos * 60
+    # return a + b + c + segundos
 
 def aumento_salarial(salario, porcentagem):
     ''' Recebe um salario e sua porcentagem de aumento, e retorna
     o novo salario'''
-    novo_salario = (salario * porcentagem /100) + salario
+    novo_salario = (salario * porcentagem / 100) + salario
     return round(novo_salario, 2)
 
 
@@ -37,20 +46,27 @@ def tempo_para_percorrer_uma_distancia(distancia, velocidade):
     ''' Recebe uma distancia e a velocidade que percorreras essa
     distancia, e retorna as horas que seriam gastas para percorrer
      em linha reta'''
-
     return round((distancia / velocidade), 2)
+
+    # '''Metodo 2'''
+    # horas_gasta = distancia / velocidade
+    # return round(horas_gasta, 2)
 
 
 def celsius_para_fahrenheit(c):
     ''' Recebe uma temperatura em celsius, e retorna a temperatura
     em fahrenheit'''
-    return (9 * c / 5 + 32)
+    # formula
+    return 9 * c / 5 + 32
+
 
 
 def fahrenheit_para_celsius(f):
     ''' Recebe uma temperatura em fahrenheit, e retorna a temperatura
      em celsius'''
+    # Formula (32 °F − 32) × 5/9
     return round(((f - 32) * 5) / 9, 2)
+
 
 def preco_aluguel_carro(dias, km):
     ''' Recebe uma quantidade de dias que o carro foi alugado e a
@@ -59,11 +75,11 @@ def preco_aluguel_carro(dias, km):
     return round(km * 0.15 + dias * 60, 2)
 
 
-def dias_perdidos_por_fumar(cigarros, anos):
+def dias_perdidos_por_fumar(cigarros_fumados, anos_fumando):
     ''' Recebe uma quantidade de cigarros fumados por dia e a quantidade
      de anos que fuma, e retorna o total de dias perdidos, sabendo que
      cada cigarro reduz a vida em 10 minutos.'''
-    return round((cigarros * 365 * anos * 10) / 1440, 2)
+    return round((cigarros_fumados * 365 * anos_fumando * 10) / 1440, 2)
 
 
 def dois_elevado_a_um_milhao():
